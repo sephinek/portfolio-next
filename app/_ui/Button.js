@@ -1,9 +1,10 @@
-export default function Button({ children }) {
+export default function Button({ children, onClick }) {
   return (
-    <button className="bg-gradient-button flex items-center justify-center rounded-full px-[1px] py-[1px] transition-all duration-300 hover:scale-[102%] hover:shadow-sm">
-      <span className="text-accent-900 text-2xs rounded-full bg-primary-50 px-4 py-[7px] font-bold uppercase tracking-wider">
-        {children}
-      </span>
+    <button
+      className="bg-gradientButton hover:bg-gradientButtonHover flex items-center justify-center rounded-md px-[2px] py-[2px] text-xs font-semibold uppercase tracking-wider text-accent-400 transition-all delay-100 duration-300 ease-in-out hover:shadow-lg"
+      onClick={onClick}
+    >
+      <span className="rounded-md bg-primary-50 px-3 py-2">{children}</span>
     </button>
   );
 }

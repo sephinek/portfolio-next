@@ -1,11 +1,14 @@
-import Image from "next/image";
-import logo from "@/public/logo-transparent.png";
 import Link from "next/link";
 
 export default function Logo() {
   return (
-    <Link href="/">
-      <Image src={logo} width={50} height={50} alt="Sephine's logo" />
+    <Link
+      href="/"
+      className="text-logo text-2xl font-black uppercase tracking-tight"
+    >
+      Sephine
     </Link>
   );
 }
+
+1234;
