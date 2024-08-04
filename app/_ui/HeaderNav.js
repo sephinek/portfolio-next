@@ -9,13 +9,13 @@ const NAV_MENUS = [
 
 export default function HeaderNav() {
   return (
-    <nav className="flex items-center gap-4">
-      <div className="flex gap-1">
+    <nav className="flex items-center gap-8">
+      <div className="flex gap-8">
         {NAV_MENUS.map((menuObj) => (
           <Link
             href={menuObj.href}
             key={menuObj.menu}
-            className="rounded-md px-4 py-2 text-primary-700 transition-all delay-75 duration-300 hover:bg-accent-100 hover:shadow-sm"
+            className="border-b-2 border-transparent px-1 py-1 text-primary-700 transition-all ease-in-out hover:border-b-2 hover:border-accent-100"
           >
             {menuObj.menu}
           </Link>

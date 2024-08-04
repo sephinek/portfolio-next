@@ -28,6 +28,7 @@ module.exports = {
           50: "#fff6fb",
           100: "#ffd9ee",
           200: "#ffb9df",
+          250: "#ff9ed3",
           300: "#ff72c0",
           400: "#ff31a2",
           500: "#FF1494",
@@ -72,10 +73,25 @@ module.exports = {
             background: "#000",
           },
         },
+        bounce: {
+          "0%": {
+            transform: "translateY(-30%)",
+            "animation-timing-function": "cubic-bezier(0.8,0,1,1)",
+          },
+          "50%": {
+            transform: "translateY(0)",
+            "animation-timing-function": "cubic-bezier(0,0,0.2,1)",
+          },
+          "100%": {
+            transform: "translateY(-30%)",
+            "animation-timing-function": "cubic-bezier(0.8,0,1,1)",
+          },
+        },
       },
       animation: {
-        slideText: "slide 70s linear 3s infinite",
-        loadingSpin: "loading 2s infinite linear alternate",
+        slide: "slide 70s linear 3s infinite",
+        loading: "loading 2s infinite linear alternate",
+        bounce: "bounce 1.5s infinite",
       },
     },
   },

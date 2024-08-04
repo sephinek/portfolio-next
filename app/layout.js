@@ -1,9 +1,8 @@
-import { Jacques_Francois_Shadow, Jost } from "next/font/google";
+import { Jost } from "next/font/google";
 import "@/app/_styles/globals.css";
 import Header from "@/app/_components/Header";
 import Footer from "@/app/_components/Footer";
 
-const jacques = Jacques_Francois_Shadow({ subsets: ["latin"], weight: "400" });
 const jost = Jost({
   subsets: ["latin"],
 });
@@ -17,10 +16,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${jost.className} flex min-h-screen flex-col bg-white tracking-wide text-primary-500 antialiased`}
+        className={`${jost.className} flex min-h-screen flex-col bg-white tracking-wide text-primary-600 antialiased`}
       >
         <Header />
-        <main className="mt-[65px] grow">{children}</main>
+        <main className="grow">{children}</main>
         <Footer />
       </body>
     </html>
