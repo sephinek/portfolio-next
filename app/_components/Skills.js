@@ -65,16 +65,19 @@ const SKILLS = [
 
 export default function TechStacks() {
   return (
-    <section className="flex flex-col items-center justify-center gap-24 py-20 text-primary-700">
+    <section className="flex flex-col items-center justify-center gap-20 py-20 text-primary-700">
       <h2 className="text-3xl font-bold uppercase">Skills</h2>
-      <div className="items-ceter flex flex-col gap-24">
+      <div className="items-ceter flex flex-col gap-16">
         {SKILLS.map(({ label, stacks }) => (
-          <div key={label} className="flex flex-col items-center gap-16">
-            <h3 className="text-xl font-semibold uppercase">{label}</h3>
-            <ul className="flex flex-row items-center gap-10">
+          <div
+            key={label}
+            className="flex flex-col items-center gap-10 rounded-2xl bg-primary-100 p-10 shadow-lg"
+          >
+            <h3 className="text-2xl font-semibold uppercase">{label}</h3>
+            <ul className="flex flex-row items-center gap-10 text-accent-400">
               {stacks.map(({ name, icon }) => (
                 <li key={name} className="flex flex-col items-center gap-2">
-                  <span className="text-3xl text-primary-700">{icon}</span>
+                  <span className="text-3xl">{icon}</span>
                   <h4 className="text-2xs">{name}</h4>
                 </li>
               ))}
