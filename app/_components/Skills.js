@@ -10,14 +10,18 @@ import {
   SiSass,
   SiNodedotjs,
   SiExpress,
+  SiMongoose,
   SiPostgresql,
-  SiDbeaver,
+  SiMongodb,
   SiGithub,
   SiSupabase,
   SiFirebase,
   SiPostman,
   SiJest,
+  SiNetlify,
+  SiVercel,
   SiVisualstudiocode,
+  SiCanva,
   SiFigma,
   SiWebflow,
   SiGoogleanalytics,
@@ -25,26 +29,27 @@ import {
 
 const SKILLS = [
   {
-    label: "Frontend",
+    label: "Front-end",
     stacks: [
       { name: "JavaScript", icon: <SiJavascript /> },
+      { name: "HTML5", icon: <SiHtml5 /> },
+      { name: "CSS3", icon: <SiCss3 /> },
       { name: "React.js", icon: <SiReact /> },
       { name: "Next.js", icon: <SiNextdotjs /> },
       { name: "Redux", icon: <SiRedux /> },
-      { name: "HTML5", icon: <SiHtml5 /> },
-      { name: "CSS3", icon: <SiCss3 /> },
       { name: "Tailwind", icon: <SiTailwindcss /> },
       { name: "Styled-Components", icon: <SiStyledcomponents /> },
       { name: "Sass", icon: <SiSass /> },
     ],
   },
   {
-    label: "Backend",
+    label: "Back-end",
     stacks: [
       { name: "Node.js", icon: <SiNodedotjs /> },
       { name: "Express.js", icon: <SiExpress /> },
+      { name: "Mongoose", icon: <SiMongoose /> },
       { name: "PostgreSQL", icon: <SiPostgresql /> },
-      { name: "DBeaver", icon: <SiDbeaver /> },
+      { name: "MongoDB", icon: <SiMongodb /> },
     ],
   },
   {
@@ -55,7 +60,10 @@ const SKILLS = [
       { name: "Firebase", icon: <SiFirebase /> },
       { name: "Postman", icon: <SiPostman /> },
       { name: "Jest", icon: <SiJest /> },
+      { name: "Netlify", icon: <SiNetlify /> },
+      { name: "Vercel", icon: <SiVercel /> },
       { name: "VSCode", icon: <SiVisualstudiocode /> },
+      { name: "Canva", icon: <SiCanva /> },
       { name: "Figma", icon: <SiFigma /> },
       { name: "Webflow", icon: <SiWebflow /> },
       { name: "Google Analytics", icon: <SiGoogleanalytics /> },
@@ -71,7 +79,7 @@ export default function TechStacks() {
         {SKILLS.map(({ label, stacks }) => (
           <div
             key={label}
-            className="flex flex-col items-center gap-10 rounded-2xl bg-primary-100 p-10 shadow-lg"
+            className="flex flex-col items-center gap-9 rounded-2xl bg-primary-100 p-10 shadow-lg"
           >
             <h3 className="text-2xl font-semibold uppercase">{label}</h3>
             <ul className="flex flex-row items-center gap-10 text-accent-400">

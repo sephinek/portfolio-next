@@ -43,7 +43,7 @@ module.exports = {
         "3xs": ".65rem",
       },
       backgroundColor: {
-        headerTransparent: "rgba(255 255 255 / 40%)",
+        headerTransparent: "rgba(255 255 255 / 80%)",
       },
       backgroundImage: {
         gradientButton:

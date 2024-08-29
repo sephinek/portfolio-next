@@ -15,7 +15,7 @@ export default function HeaderNav() {
           <Link
             href={menuObj.href}
             key={menuObj.menu}
-            className="border-b-2 border-transparent px-1 py-1 text-primary-700 transition-all ease-in-out hover:border-b-2 hover:border-primary-300"
+            className="border-b-2 border-transparent px-1 py-1 font-medium text-primary-700 transition-all duration-700 ease-in-out hover:border-b-2 hover:border-primary-300"
           >
             {menuObj.menu}
           </Link>
