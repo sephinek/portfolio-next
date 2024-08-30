@@ -26,6 +26,8 @@ import {
   SiWebflow,
   SiGoogleanalytics,
 } from "react-icons/si";
+import SectionHeading from "@/app/_ui/SectionHeading";
+import SectionContainer from "@/app/_ui/SectionContainer";
 
 const SKILLS = [
   {
@@ -71,28 +73,33 @@ const SKILLS = [
   },
 ];
 
-export default function TechStacks() {
+export default function Skills() {
   return (
-    <section className="flex flex-col items-center justify-center gap-20 py-20 text-primary-700">
-      <h2 className="text-3xl font-bold uppercase">Skills</h2>
+    <SectionContainer sectionName="section-skills">
+      <SectionHeading text="Skills" />
       <div className="items-ceter flex flex-col gap-16">
         {SKILLS.map(({ label, stacks }) => (
           <div
             key={label}
-            className="flex flex-col items-center gap-9 rounded-2xl bg-primary-100 p-10 shadow-lg"
+            className="group flex flex-col items-center gap-12 rounded-[3rem] bg-primary-600 p-10 pt-8 shadow-md transition-all duration-1000 hover:-translate-y-6 hover:bg-primary-700 hover:shadow-lg"
           >
-            <h3 className="text-2xl font-semibold uppercase">{label}</h3>
-            <ul className="flex flex-row items-center gap-10 text-accent-400">
+            <h3 className="text-2xl uppercase tracking-widest text-primary-400">
+              {label}
+            </h3>
+            <ul className="flex flex-row items-center gap-8 text-accent-400">
               {stacks.map(({ name, icon }) => (
-                <li key={name} className="flex flex-col items-center gap-2">
+                <li
+                  key={name}
+                  className="transition-color flex flex-col items-center gap-2 duration-150 ease-in-out hover:text-accent-700"
+                >
                   <span className="text-3xl">{icon}</span>
-                  <h4 className="text-2xs">{name}</h4>
+                  <h4 className="text-3xs font-medium uppercase">{name}</h4>
                 </li>
               ))}
             </ul>
           </div>
         ))}
       </div>
-    </section>
+    </SectionContainer>
   );
 }

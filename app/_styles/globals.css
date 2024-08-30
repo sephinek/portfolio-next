@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  .section-skills {
+    background-image: linear-gradient(135deg, #fff 25%, transparent 25%),
+      linear-gradient(225deg, #fff 25%, transparent 25%),
+      linear-gradient(45deg, #fff 25%, transparent 25%),
+      linear-gradient(315deg, #fff 25%, #f3f3f3e0 25%);
+    background-position:
+      10px 0,
+      10px 0,
+      0 0,
+      0 0;
+    background-size: 100px 200px;
+    background-repeat: repeat;
+  }
+}

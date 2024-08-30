@@ -1,3 +1,5 @@
+const { transform } = require("next/dist/build/swc");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -26,9 +28,10 @@ module.exports = {
         },
         accent: {
           50: "#fff6fb",
+          80: "#fff0f8",
           100: "#ffd9ee",
           200: "#ffb9df",
-          250: "#ff9ed3",
+          250: "#ffb9e0",
           300: "#ff72c0",
           "300a": "#ff72c088",
           400: "#ff31a2",
@@ -52,6 +55,14 @@ module.exports = {
           "linear-gradient(200deg, rgba(144, 143, 143, 49%) 0%, rgba(255,49, 162, 55%) 59%, rgba(255, 20, 148, 57%) 66%, rgba(130, 130, 130, 51%) 100%)",
       },
       keyframes: {
+        fadeIn: {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1 },
+        },
+        fadeDown: {
+          "0%": { opacity: 0, transform: "translateY(-100%)" },
+          "100%": { opacity: 1, transform: "translateY(0)" },
+        },
         slide: {
           "0%": { transform: "translateX(0%)" },
           "100%": { transform: "translateX(-100%)" },
@@ -76,20 +87,30 @@ module.exports = {
         },
         bounce: {
           "0%": {
+            color: "#525252",
             transform: "translateY(-30%)",
             "animation-timing-function": "cubic-bezier(0.8,0,1,1)",
           },
-          "50%": {
+          "45%": {
+            color: "#FF1494",
             transform: "translateY(0)",
-            "animation-timing-function": "cubic-bezier(0,0,0.2,1)",
+            "animation-timing-function": "cubic-bezier(0,0,2,1)",
+          },
+          "55%": {
+            color: "#FF1494",
+            transform: "translateY(0)",
+            "animation-timing-function": "cubic-bezier(0,0,2,1)",
           },
           "100%": {
+            color: "#525252",
             transform: "translateY(-30%)",
             "animation-timing-function": "cubic-bezier(0.8,0,1,1)",
           },
         },
       },
       animation: {
+        fadeIn: "fadeIn .75s ease-in .75s forwards",
+        fadeDown: "fadeDown .75s ease-in",
         slide: "slide 70s linear 3s infinite",
         loading: "loading 2s infinite linear alternate",
         bounce: "bounce 1.5s infinite",

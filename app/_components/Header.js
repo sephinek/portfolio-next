@@ -3,8 +3,8 @@ import Logo from "@/app/_ui/Logo";
 
 export default function Header() {
   return (
-    <header className="bg-headerTransparent fixed z-10 w-full border-b-[1px] border-primary-100 py-3">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-3">
+    <header className="animate-fadeDown fixed z-10 h-20 w-full border-b-[1px] border-primary-100 bg-headerTransparent">
+      <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-3">
         <Logo />
         <HeaderNav />
       </div>
