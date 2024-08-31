@@ -12,8 +12,8 @@ const raleway = Raleway({
 
 export default function Hero() {
   return (
-    <section className="bg-accent-80 relative flex h-[600px] flex-col">
-      <div className="relative m-10 mx-auto flex h-full w-full max-w-7xl justify-between p-8">
+    <section className="relative flex h-[600px] flex-col bg-accent-80">
+      <div className="relative mx-auto my-10 flex h-full w-full max-w-7xl justify-between p-8">
         <h1 className="absolute top-[16%] text-4xl font-light tracking-wide">
           Hey there, my name is&nbsp;
           <span className={`${raleway.className} font-bold text-primary-600`}>

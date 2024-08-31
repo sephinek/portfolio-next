@@ -4,7 +4,7 @@ export default function Logo() {
   return (
     <Link
       href="/"
-      className="text-logo text-2xl font-black uppercase tracking-tight"
+      className="ease text-2xl font-black uppercase tracking-tight text-logo transition duration-300 hover:brightness-90"
     >
       Sephine
     </Link>
