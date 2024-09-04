@@ -32,7 +32,7 @@ export default function Hero() {
             innovative solutions for problems
           </span>
           . I enjoy learning new technologies everyday. I&apos;m currently based
-          on Glendale, CA 🏡.
+          on Los Angeles, CA 🏡.
         </div>
 
         <Image
