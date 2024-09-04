@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import HotelBookingAppImg from "@/public/hotel-booking-thumbnail.png";
 import NotTomorrowAppImg from "@/public/not-tomorrow-thumbnail.png";
-import DocumentScannerAppImg from "@/public/document-Scanner-thumbnail.png";
+import DocumentScannerAppImg from "@/public/document-scanner-thumbnail.png";
 import SectionContainer from "@/app/_ui/SectionContainer";
 import SectionHeading from "@/app/_ui/SectionHeading";
 
