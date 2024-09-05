@@ -77,23 +77,25 @@ export default function Skills() {
   return (
     <SectionContainer sectionName="section-skills">
       <SectionHeading text="Skills" />
-      <div className="items-ceter flex flex-col gap-16">
+      <div className="items-ceter desktop-lg:gap-16 mx-auto flex flex-col gap-6">
         {SKILLS.map(({ label, stacks }) => (
           <div
             key={label}
-            className="group flex flex-col items-center gap-12 rounded-[3rem] bg-primary-600 p-10 pt-8 shadow-md transition-all duration-1000 hover:-translate-y-6 hover:bg-primary-700 hover:shadow-lg"
+            className="desktop-lg:gap-12 mobile-sm:mx-10 group mx-6 flex flex-col items-center gap-8 rounded-[3rem] bg-primary-600 p-10 pt-8 shadow-md transition-all duration-1000 hover:-translate-y-6 hover:bg-primary-700 hover:shadow-lg"
           >
-            <h3 className="text-2xl uppercase tracking-widest text-primary-400">
+            <h3 className="desktop-lg:text-2xl text-lg uppercase tracking-widest text-primary-400">
               {label}
             </h3>
-            <ul className="flex flex-row items-center gap-8 text-accent-400">
+            <ul className="desktop-lg:gap-8 flex flex-wrap items-center justify-center gap-x-5 gap-y-4 text-center text-accent-400">
               {stacks.map(({ name, icon }) => (
                 <li
                   key={name}
                   className="transition-color flex flex-col items-center gap-2 duration-150 ease-in-out hover:text-accent-700"
                 >
                   <span className="text-3xl">{icon}</span>
-                  <h4 className="text-3xs font-medium uppercase">{name}</h4>
+                  <h4 className="text-4xs desktop-lg:text-3xs font-medium uppercase">
+                    {name}
+                  </h4>
                 </li>
               ))}
             </ul>

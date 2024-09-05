@@ -8,6 +8,14 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      "mobile-sm": "480px",
+      "mobile-md": "550px",
+      tablet: "768px",
+      laptop: "1000px",
+      "desktop-lg": "1200px",
+      "desktop-xl": "1350px",
+    },
     extend: {
       colors: {
         black: "#323130",
@@ -30,6 +38,7 @@ module.exports = {
           50: "#fff6fb",
           80: "#fff0f8",
           100: "#ffd9ee",
+          "100a": "#ffd9ee88",
           200: "#ffb9df",
           250: "#ffb9e0",
           300: "#ff72c0",
@@ -44,6 +53,7 @@ module.exports = {
       fontSize: {
         "2xs": ".7rem",
         "3xs": ".65rem",
+        "4xs": ".60rem",
       },
       backgroundColor: {
         headerTransparent: "rgba(255 255 255 / 80%)",

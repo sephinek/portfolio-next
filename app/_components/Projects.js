@@ -50,26 +50,26 @@ const PROJECTS = [
 
 export default function Projects() {
   return (
-    <SectionContainer bgColor="bg-primary-100" maxWidth="max-w-screen">
+    <SectionContainer bgColor="bg-primary-100">
       <SectionHeading text="Projects" color="dark" />
-      <div className="flex flex-wrap justify-center gap-10">
+      <div className="desktop-lg:gap-10 flex flex-wrap justify-center gap-6">
         {PROJECTS.map((project) => (
           <Link
             href={`/projects/${project.to}`}
-            className={`group flex h-[30rem] ${project.size === "wide" ? "w-[40rem]" : "w-[25rem]"} cursor-pointer flex-col items-center gap-5 rounded-[4rem] ${project.bgColor} py-10 transition-all duration-500 hover:-translate-y-3 hover:shadow-inner hover:brightness-110`}
+            className={`desktop-lg:h-[30rem] desktop-lg:mx-0 group mx-8 flex ${project.size === "wide" ? "desktop-lg:w-[40rem]" : "desktop-lg:w-[25rem]"} desktop-lg:gap-5 cursor-pointer flex-col items-center gap-5 rounded-[4rem] ${project.bgColor} desktop-lg:p-10 px-6 py-10 transition-all duration-500 hover:-translate-y-3 hover:shadow-inner hover:brightness-110`}
             key={project.name}
           >
-            <h3 className="text-balance text-center text-2xl font-black leading-none">
+            <h3 className="mobile-sm:text-2xl text-balance text-center text-xl font-black leading-none">
               {project.name}
             </h3>
-            <p className="text-balance text-center leading-tight tracking-wider">
+            <p className="mobile-sm:text-base mobile-sm:max-w-[80%] desktop-lg:text-balance text-center text-[0.9rem] leading-tight tracking-wider">
               {project.description}
             </p>
             <p className="ease text-sm font-semibold uppercase transition-all duration-500 group-hover:translate-y-1 group-hover:text-base">
               ▼ Explore the project!
             </p>
             <div
-              className={`${project.size === "wide" ? "w-1/2" : "w-1/3"} h-2/3 overflow-hidden rounded-3xl border-4 border-primary-300 shadow-md transition-all duration-500 group-hover:-translate-y-1 group-hover:scale-110`}
+              className={`${project.size === "wide" ? "desktop-lg:w-1/2 mobile-sm:w-2/3 w-full" : "desktop-lg:w-1/3 mobile-sm:w-1/3 w-[70%]"} desktop-lg:h-2/3 overflow-hidden rounded-3xl border-4 border-primary-300 shadow-md transition-all duration-500 group-hover:-translate-y-1 group-hover:scale-110`}
             >
               <Image
                 src={project.image}
