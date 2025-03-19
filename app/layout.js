@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
         className={`${jost.className} flex min-h-screen flex-col bg-white tracking-wide text-primary-600 antialiased`}
       >
         <Header />
-        <main className="grow pt-20">{children}</main>
+        <main className="desktop-lg:pt-20 grow pt-16">{children}</main>
         <Footer />
       </body>
     </html>

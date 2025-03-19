@@ -5,7 +5,7 @@ export default function SectionContainer({
 }) {
   return (
     <section
-      className={`${sectionName} ${bgColor} flex flex-col items-center justify-center gap-20 py-20 text-primary-700`}
+      className={`${sectionName} ${bgColor} desktop-lg:gap-20 desktop-lg:py-20 mobile-sm:gap-10 flex flex-col items-center justify-center gap-8 py-16 text-primary-700`}
     >
       {children}
     </section>
